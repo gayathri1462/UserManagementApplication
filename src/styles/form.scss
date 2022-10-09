@@ -1,0 +1,68 @@
+$backgroundcolor: #2C3639;
+$color: #ffffff;
+$fontfamily : "Montserrat", "sans-serif";
+
+.Form {
+  border-radius: 5px;
+  background-color: $backgroundcolor;
+  padding: 20px;
+  margin: 30px;
+  color:$color;
+}
+
+.Image{
+  width:60px;
+}
+
+.form__input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+ /* .Button {
+background-color: $backgroundcolor ;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: inline-block; 
+  
+}*/
+
+.button {
+  font-family: $fontfamily;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  width: 4.5rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  margin: 0.2rem;
+}
+
+.AddUserButton {
+  @extend .button;
+  $backgroundcolor: #4caf50 !global ;
+  background-color: $backgroundcolor;
+}
+
+
+.BackButton {
+  @extend .button;
+  $backgroundcolor: white !global ;
+  background-color: $backgroundcolor;
+  $color: black !global ;
+  color: $color;
+}
