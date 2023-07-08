@@ -16,7 +16,7 @@
 ## Overview
 <img width="960" alt="image" src="https://github.com/gayathri1462/UserManagementApplication/assets/42805318/566de6cb-4dc0-4052-b9ea-618c73cabe3a">
 
-<p> This is a user management web application built with React. The app provides basic CRUD (Create, Read, Update, Delete) operations to manage user data.</p>
+<p> This is a user management web application built using React.js and Redux, featuring CRUD functionalities for efficient user data management. Integrated React Router for seamless navigation and utilized React Saga middleware to handle complex asynchronous operations, ensuring optimal performance and user experience.</p>
 
 ### Built With
 - Languages: HTML and CSS
@@ -27,7 +27,7 @@
 
 TECHNICAL SKILLS
 - Languages: HTML, CSS, TypeScript
-- Libraries/Frameworks: React.js, Redux, React Router, React Saga
+- Libraries/Frameworks: React.js, Redux, React Router, Redux Saga
 - CSS Preprocessor: SCSS
 - Version Control: Git 
 - Testing: Jest, React Testing Library (RTL)
