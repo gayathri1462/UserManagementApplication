@@ -14,7 +14,8 @@
 <!-- OVERVIEW -->
 
 ## Overview
-<img width="960" alt="image" src="https://github.com/gayathri1462/UserManagementApplication/assets/42805318/4f637b60-23c3-4417-a641-f84003b62cca">
+<img width="960" alt="image" src="https://github.com/gayathri1462/UserManagementApplication/assets/42805318/566de6cb-4dc0-4052-b9ea-618c73cabe3a">
+
 <p> This is a user management web application built with React. The app provides basic CRUD (Create, Read, Update, Delete) operations to manage user data.</p>
 
 ### Built With
