@@ -1,7 +1,7 @@
 <h1 align="center">User Management Web Application</h1>
 <div align="center">
   <h3>
-    <a href="https://l87ipu.csb.app/" target="_blank" rel=“noreferrer”>
+    <a href="https://2x7tt5.csb.app/" target="_blank" rel=“noreferrer”>
       Demo
     </a>
     <span> | </span>
