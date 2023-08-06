@@ -1,0 +1,92 @@
+$redColor:#DF2E38;
+$greenColor:#5D9C59;
+$fontfamily : "Lora", "serif";
+
+.flexStyling{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addUserWrapper {
+  width: 100%;
+  max-height: 85%;
+  background-color: #4e4feb;
+  @extend .flexStyling;
+  margin-top: 50px;;
+
+  .adderUserCard{
+    width:60%;
+    min-height:30%;
+    max-height: 85%;
+    overflow: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1em 3em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+    .topInputDiv{
+      @extend .flexStyling;
+      flex-direction: row;
+      gap:5%;
+    }
+
+    .buttonDiv{
+      @extend .flexStyling;
+      
+      .extraBtnStyling { 
+        color: $greenColor;
+        border: 1px solid $greenColor;
+        background-color: #fff;
+        width:300px;
+        text-align: center;
+        @extend .flexStyling;
+        margin:0.75em 0em;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+    
+      .extraBtnStyling:hover{
+        color: #fff;
+        border: 1px solid $greenColor;
+        background-color: $greenColor;
+      }
+    }
+
+    .btnDiv{
+      display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1em;
+
+    .backBtnDiv{
+      display:flex;
+      align-items: center;
+      flex-direction: row;
+    }
+  
+      .arrowIcon{
+        border-radius: 50%;
+        background-color: #4e4feb;
+        width:30px;
+        height:30px;
+        color:#fff;
+        margin:0.5em;
+        cursor: pointer;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+  
+      .backTextStyling{
+        font-family: $fontfamily;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.5;
+        text-align: center;
+        color: #4e4feb;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+}

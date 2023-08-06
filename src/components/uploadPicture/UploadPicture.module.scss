@@ -1,0 +1,115 @@
+$fontfamily : "Lora", "serif";
+$backgroundcolor: #fff;
+$redColor:#D71313;
+$height: 100%;
+$width:100%;
+$color:#000;
+
+.uploadPictureContent{
+
+
+.uploadPictureWrapper {
+  width:$width;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap:20px 0px;
+  position: relative;
+  // padding-bottom: 1em;
+
+
+  .uploadPictureStyling {
+    border-radius: 5px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .uploadPictureDiv {
+    @extend .uploadPictureStyling;
+    border: 1px solid #068FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .textStyling{
+    font-family: $fontfamily;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+  }
+
+  .uploadPictureTextStyling {
+    @extend .textStyling;
+    color: #068FFF;
+    padding: 1.5em 1em;
+    cursor: pointer;
+  }
+
+
+  .buttonStyling {
+    @extend .textStyling;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .uploadPictureButton {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 20px;
+
+    .inputUploadStyling {
+      display: none;
+    }
+
+    .uploadButtonStyle {
+      @extend .buttonStyling;
+      color: #4E4FEB;
+      border: 1px solid #4E4FEB;
+      background-color:#fff;
+      margin-right: 30px;
+    }
+
+
+    .uploadButtonStyle:hover {
+      color: #fff;
+      border: 1px solid #fff;
+      background-color:#4E4FEB;  
+    }
+
+    .deleteButtonStyle { 
+      @extend .buttonStyling;
+      color: $redColor;
+      border: 1px solid $redColor;
+      background-color: #fff;
+    }
+
+    .deleteButtonStyle:hover{
+      color: #fff;
+      border: 1px solid $redColor;
+      background-color: $redColor;
+    }
+  }
+
+
+}
+
+.errorMsgStyling{
+  font-family: $fontfamily;
+  font-size:16px;
+  color:$redColor;
+  line-height: 2;
+  min-height: 30px;
+  } 
+
+}

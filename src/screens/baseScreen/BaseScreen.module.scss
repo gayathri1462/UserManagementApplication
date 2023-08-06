@@ -1,0 +1,93 @@
+$fontfamily: 'Libre Baskerville', serif;
+$backgroundcolor: #068FFF;
+$height: 100%;
+$width:100%;
+$color:#fff;
+$greenColor:#5D9C59;
+$redColor:#DF2E38;
+
+.flexBoxStyling{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.baseScreenWrapper {
+  width: $width;
+  height: $height;
+  display: flex;
+  flex-direction: column;
+
+
+  .headerDiv{
+@extend .flexBoxStyling;
+flex-wrap: wrap;
+flex: 0 0 auto; 
+background-color: #4E4FEB;
+min-height: 10%;
+width:100%;
+
+    .headerLabel {
+      font-size: 2em;
+      font-weight: 700;
+      font-family: $fontfamily;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $color;      
+      padding: 0.75em 1em;
+      text-align: center;
+    }
+
+    .headerBtn{
+      @extend .flexBoxStyling;
+    
+
+.btnStyling{
+  @extend .flexBoxStyling;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width:150px;
+}
+
+      .extraClearBtnStyling{
+@extend .btnStyling;
+color: $redColor;
+border: 1px solid $redColor;
+background-color: #fff;
+      }
+
+      .extraClearBtnStyling:hover{
+        color: #fff;
+        border: 1px solid $redColor;
+        background-color: $redColor;
+      }
+      .extraAddBtnStyling{
+        @extend .btnStyling;
+        color: $greenColor;
+        border: 1px solid $greenColor;
+        background-color: #fff;
+      }
+
+     
+      .extraAddBtnStyling:hover{
+        color: #fff;
+        border: 1px solid $greenColor;
+        background-color: $greenColor;
+      }
+    }
+  }
+
+  .outletWrapper{
+    flex:1;
+    width:100%;
+    background-color: #4E4FEB;
+  }
+
+ 
+
+
+}
+
+

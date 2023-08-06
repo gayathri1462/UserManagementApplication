@@ -1,0 +1,122 @@
+
+$fontfamily : "Lora", "serif";
+$blueColor: #068FFF;
+$purpleColor: #4e4feb;
+
+.textOverFlowStyling{
+overflow-wrap:break-word;
+word-break: break-all;
+}
+
+.userListWrapper{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding:1.5em;
+  background-color: #fff;
+
+  
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size:3.5em;
+  font-weight:700;
+  font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
+  color:$purpleColor;
+  padding-bottom: 0.5em;
+
+}
+
+table tr {
+  background-color: #fff;
+  border: 1px solid $blueColor;
+  padding: .35em;
+  font-family: $fontfamily;
+}
+
+table th,
+table td {
+  padding: 0.5em;
+  text-align: center;
+  font-family: $fontfamily;
+}
+
+table th {
+  font-size: 1.5em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color:$purpleColor;
+  @extend .textOverFlowStyling;
+}
+
+
+table td {
+  font-size: 1.5em;
+  letter-spacing: .05em;
+  @extend .textOverFlowStyling;
+}
+
+.iconStyling{
+  font-size: 1.5em;
+  text-align: center;
+  font-family: $fontfamily;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #068FFF;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+}
