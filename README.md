@@ -1,11 +1,11 @@
-<h1 align="center">User Management Web App</h1>
+<h1 align="center">User Management Web Application</h1>
 <div align="center">
   <h3>
     <a href="https://l87ipu.csb.app/" target="_blank" rel=“noreferrer”>
       Demo
     </a>
     <span> | </span>
-    <a href="https://codesandbox.io/s/reactreduxsagalocalstoragets-l87ipu" target="_blank" rel=“noreferrer”>
+    <a href="https://github.com/gayathri1462/UserManagementApplication" target="_blank" rel=“noreferrer”>
       Solution
     </a>
   </h3>
@@ -14,7 +14,7 @@
 <!-- OVERVIEW -->
 
 ## Overview
-<img width="960" alt="image" src="https://github.com/gayathri1462/UserManagementApplication/assets/42805318/566de6cb-4dc0-4052-b9ea-618c73cabe3a">
+<img width="925" alt="image" src="https://github.com/gayathri1462/UserManagementApplication/assets/42805318/cd88e324-87d8-41d2-a347-168dfc838e8d">
 
 <p> This is a user management web application built using React.js and Redux, featuring CRUD functionalities for efficient user data management. Integrated React Router for seamless navigation and utilized React Saga middleware to handle complex asynchronous operations, ensuring optimal performance and user experience.</p>
 
