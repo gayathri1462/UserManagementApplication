@@ -20,24 +20,28 @@
 
 ### Built With
 - Languages: HTML,CSS and TypeScript
-- Libraries/Frameworks: ReactJS, React Router, Redux Toolkit, Redux Saga, React Icons
+- Libraries/Frameworks: React JS, React Router, Redux Toolkit, Redux Saga, React Icons, React Toastify
 - CSS Preprocessor: SCSS
 - Version Control: Git 
 - Package Managers: NPM
 
 ## Features
 
-The user management web app follows the following flow:
+The user management web application follows the following flow:
 
-1. **User List**: The initial screen displays a list of users, showcasing their names, email addresses, and other relevant details. Users can view, edit, or delete existing user records.
+1. **Initial Screen**: The initial screen will display a list of users, including their names, email addresses, and other relevant details. If there are no users, it will show a button to navigate to the "Add User" page. If there are existing users, it will display each user's information with "View" and "Delete" buttons.
 
-2. **Create User**: Users have the ability to create new user records by providing necessary information such as name, email address, and additional details. The app validates the input and adds the new user to the user list.
+2. **Header**: The header will have two buttons: "Add User" and "Clear All Data."
 
-3. **Edit User**: Users can update existing user records by accessing an edit page. The edit page pre-populates the form fields with the current user data, allowing users to modify and save the changes.
+3. **Add User**: The "Add User" page will allow users to input necessary information such as name, email address, and additional details. The app should validate the input and add the new user to the user list.
 
-4. **View User**: Clicking on a user's details from the user list provides a detailed view of the user's information. This view-only mode allows users to review the user's data without the ability to make changes.
+4. **View User**: Clicking on a user's details from the user list will provide a detailed view of the user's information. This view-only mode will allow users to review the user's data without the ability to make changes.
 
-5. **Delete User**: Users can delete user records through an individual delete option on each user's details page.
+5. **Edit User**: Within the "View User" mode, there should be a "Switch to Edit Mode" button, which will allow users to modify the user's information and save the changes.
+
+6. **Delete User**: Each user's details page will have a "Delete" button to allow users to delete the corresponding user record.
+
+7. **Clear All Data**: The "Clear All Data" button in the header will enable users to delete all user records from the list.
 
 
 ## How To Use
@@ -53,13 +57,4 @@ $ npm install
 # Run the app
 $ npm start
 ```
-
-### License
-
-This project is licensed under the [MIT License](LICENSE).
-
-### Acknowledgments
-
-- [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
-- [React Router](https://reactrouter.com/) - A popular routing library for React applications.
 
