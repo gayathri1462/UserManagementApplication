@@ -14,36 +14,27 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     addUser: (state, action: PayloadAction<User>) => {
-      return [...state, action.payload];
-    },
-    updateUser: (state, action: PayloadAction<User[]>) => {
-      // action.payload.forEach((i: any) => {
-      //   state.push(i);
-      // });
-      // return state;
-      return [...state, ...action.payload];
+      state.push(action.payload);
     },
     editUser: (state, action: PayloadAction<User>) => {
       const { id, image, name, email, skills } = action.payload;
-      return state.map((user) =>
-        user.id === id ? { ...user, image, name, email, skills } : user
-      );
+      const userIndex = state.findIndex((user) => user.id === id);
+      if (userIndex !== -1) {
+        state[userIndex] = { ...state[userIndex], image, name, email, skills };
+      }
     },
     deleteUser: (state, action: PayloadAction<{ id: string }>) => {
       const { id } = action.payload;
-      return state.filter((user) => user.id !== id);
+      const userIndex = state.findIndex((user) => user.id === id);
+      if (userIndex !== -1) {
+        state.splice(userIndex, 1);
+      }
     },
-    clearList: () => {
-      return initialState;
+    clearList: (state: User[]) => {
+      state.splice(0, state.length);
     }
   }
 });
 
-export const {
-  addUser,
-  editUser,
-  updateUser,
-  deleteUser,
-  clearList
-} = userSlice.actions;
+export const { addUser, editUser, deleteUser, clearList } = userSlice.actions;
 export default userSlice.reducer;
