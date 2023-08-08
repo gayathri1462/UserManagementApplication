@@ -1,31 +1,14 @@
-import {
-  addUser,
-  editUser,
-  updateUser,
-  deleteUser,
-  clearList
-} from "../reducers/userSlice";
-import { put, takeEvery, select } from "redux-saga/effects";
+import { put, takeEvery } from "redux-saga/effects";
 import {
   ADD_USER,
   DELETE_USER_BY_ID,
-  UPDATE_USERS,
   EDIT_USER_BY_ID,
   CLEAR_LIST
 } from "../types/types";
 
-export function* getUsersSagaWorker() {
-  const { users } = yield select((state) => state);
-  yield put(updateUser(users));
-}
-// watcher saga
-export function* getUsersSagaWatcher() {
-  yield takeEvery(UPDATE_USERS, getUsersSagaWorker);
-}
-
 export function* addUsersSagaWorker(action) {
   const newUser = action.payload;
-  yield put(addUser(newUser));
+  yield put({ type: "ADD_USER", payload: newUser });
 }
 
 export function* addUsersSagaWatcher() {
@@ -34,7 +17,7 @@ export function* addUsersSagaWatcher() {
 
 export function* editUsersWorker(action) {
   const editedUser = action.payload;
-  yield put(editUser(editedUser));
+  yield put({ type: "EDIT_USER_BY_ID", payload: editedUser });
 }
 
 export function* editUsersSagaWatcher() {
@@ -43,7 +26,7 @@ export function* editUsersSagaWatcher() {
 
 export function* deleteUserByIdSagaWorker(action) {
   const { id } = action.payload;
-  yield put(deleteUser(id));
+  yield put({ type: "DELETE_USER_BY_ID", payload: { id } });
 }
 
 export function* deleteUserByIdSagaWatcher() {
@@ -51,7 +34,7 @@ export function* deleteUserByIdSagaWatcher() {
 }
 
 export function* clearListSagaWorker() {
-  yield put(clearList());
+  yield put({ type: "CLEAR_LIST" });
 }
 
 export function* clearListSagaWatcher() {
