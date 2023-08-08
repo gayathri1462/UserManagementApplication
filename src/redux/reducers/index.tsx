@@ -4,5 +4,5 @@ import listsReducer from "./listSlice";
 
 export const rootReducer = combineReducers({
   users: usersReducer,
-  lists: listsReducer
+  userlist: listsReducer
 });
